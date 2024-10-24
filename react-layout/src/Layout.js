@@ -7,6 +7,10 @@ const Layout = () => {
         <>
             <Header />
 
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/pictures">Pictures</Link>
+
             <Outlet />
 
             <p>This is my footer</p>
