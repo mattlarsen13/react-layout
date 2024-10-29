@@ -1,0 +1,7 @@
+.tree img{
+    max-width: 25%;
+}
+
+.pruned {
+    text-decoration: line-through;
+}
