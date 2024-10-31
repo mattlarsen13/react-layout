@@ -1,5 +1,15 @@
+import SlideShow from "../components/SlideShow";
+import HousePlans from "../components/HousePlans";
+
 const About = () => {
-    return <h1>About Page</h1>
+    return (
+        <>
+            <h3>About</h3>
+            <SlideShow />
+
+            <HousePlans />
+        </>
+    );
 };
 
 export default About;
