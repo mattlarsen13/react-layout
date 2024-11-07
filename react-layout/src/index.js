@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Pictures from "./pages/Pictures";
+import Contact from "./pages/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={(<Home />)} />
           <Route path="about" element={(<About />)} />
           <Route path="pictures" element={(<Pictures />)} />
+          <Route path="contact" element={(<Contact />)} />
         </Route>
       </Routes>
     </BrowserRouter>
