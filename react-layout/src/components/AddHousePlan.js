@@ -16,12 +16,21 @@ const handleImageChange = (event) => {
     setInputs((values)=>({...values,[name]:value}));
 };
 
-const addToServer = (event) => {
+const addToServer = async(event) => {
     event.preventDefault();
     setResult("Sending...");
 
     const formData = new FormData(event.target);
-    console.log(formData);
+    console.log(...formData);
+
+    const response = await fetch("http://localhost:3001/api/house_plans/", {
+      method:"POST",
+      body:formData
+    });
+
+    if(response.status == 200) {
+      setResult("House Plan successfully added");
+    }
 };
   return (
     <div id="add-dialog" className="w3-modal">
