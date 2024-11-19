@@ -25,6 +25,14 @@ const HousePlan = (props) => {
     setShowDeleteDialog(false);
   };
 
+  const hideHousePlan = () => {
+    setShowHousePlan(false);
+  }
+
+  const editHousePlan = (newHousePlan) => {
+    setHousePlan(newHousePlan);
+  };
+
   return (
     <>
       {showHousePlan ? (
@@ -32,6 +40,7 @@ const HousePlan = (props) => {
           {showDeleteDialog ? (
             <DeleteHousePlan
               closeDialog={closeDeleteDialog}
+              hideHousePlan = {hideHousePlan}
               name={housePlan.name}
               _id={housePlan._id}
             />
@@ -42,6 +51,7 @@ const HousePlan = (props) => {
           {showEditDialog ? (
             <EditHousePlan
               closeDialog={closeEditDialog}
+              
               _id={housePlan._id}
               name={housePlan.name}
               size={housePlan.size}
